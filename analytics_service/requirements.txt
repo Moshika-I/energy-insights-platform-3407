@@ -41,3 +41,10 @@ uvicorn==0.34.0
 uvloop==0.21.0
 watchfiles==1.0.5
 websockets==15.0.1
+
+# DB client used by src.api.core.db when POSTGRES_URL/DATABASE_URL is configured.
+# The [postgresql] extra pulls in async PostgreSQL driver support.
+databases[postgresql]==0.9.0
+
+# Ensure asyncpg is explicitly available in environments that don't fully resolve extras.
+asyncpg==0.30.0
